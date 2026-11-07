@@ -1,0 +1,245 @@
+:root {
+    --cream: #fbf6ee;
+    --paper: #ffffff;
+    --ink: #2b2118;
+    --muted: #6b5a4b;
+    --accent: #8c3b2b;
+    --accent-dark: #6e2c1f;
+    --line: #e4d8c6;
+    --radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+.site-header {
+    background: var(--accent);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem 1rem;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 0.04em;
+}
+
+.tagline {
+    margin: 0.25rem 0 0.75rem;
+    font-style: italic;
+}
+
+.site-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.site-header nav a {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+    border-bottom-color: #fff;
+}
+
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2rem;
+}
+
+.welcome-note {
+    background: #fff4d6;
+    border-left: 4px solid #d9a52b;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 2px 6px rgba(43, 33, 24, 0.06);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--accent-dark);
+}
+
+.field {
+    margin-bottom: 1.1rem;
+}
+
+label,
+legend {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.35rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+fieldset {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.55rem;
+    font-size: 1rem;
+    border: 1px solid #bfae98;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.radio-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: normal;
+    margin: 0;
+    cursor: pointer;
+}
+
+.radio-option input {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid var(--accent);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark);
+}
+
+.btn-secondary {
+    background: #fff;
+    color: var(--accent);
+}
+
+.btn-secondary:hover {
+    background: #f6ebe7;
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+    outline: 3px solid #d9a52b;
+    outline-offset: 2px;
+}
+
+.receipt-card {
+    background: #fffdf8;
+    border: 2px dashed var(--line);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.insight-note {
+    color: var(--muted);
+    font-style: italic;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.price-figure {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--accent-dark);
+}
+
+.full-width-note {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.steps li {
+    margin-bottom: 0.5rem;
+}
+
+code {
+    background: #f3ece1;
+    padding: 0 0.3rem;
+    border-radius: 4px;
+}
+
+.site-footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+@media (max-width: 540px) {
+    .site-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-row .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
